@@ -73,11 +73,11 @@ function initTypewriter() {
   if (!element) return;
 
   const phrases = [
-    'build AI-powered apps.',
-    'solve complex problems.',
-    'craft elegant solutions.',
+    'build distributed systems.',
+    'design scalable platforms.',
+    'engineer reliable infrastructure.',
     'love clean code.',
-    'create great experiences.',
+    'ship production software.',
   ];
 
   let phraseIndex = 0;
