@@ -42,7 +42,7 @@
         <li><a href="#experience" class="nav__link">Experience</a></li>
         <li><a href="#projects" class="nav__link">Projects</a></li>
         <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#side-quests" class="nav__link">Side Quests</a></li>
+        <li><a href="#highlight-reel" class="nav__link">Highlight Reel</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
       <a href="assets/resume/Lemuel_Mensah_Resume.pdf" target="_blank" class="nav__resume-btn">Resume</a>
@@ -429,83 +429,153 @@
     </div>
   </section>
 
-  <!-- ===================== SIDE QUESTS ===================== -->
-  <section class="section side-quests" id="side-quests">
+  <!-- ===================== THE HIGHLIGHT REEL ===================== -->
+  <section class="section highlight-reel" id="highlight-reel">
     <div class="container">
       <h2 class="section__title reveal">
-        <span class="section__number">05.</span> Side Quests
+        <span class="section__number">05.</span> The Highlight Reel
       </h2>
-      <p class="section__subtitle reveal">Life beyond the terminal</p>
-    </div>
-    <div class="carousel reveal" id="carousel">
-      <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Previous">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-      </button>
-      <div class="carousel__track" id="carouselTrack">
+      <p class="section__subtitle reveal">Life beyond the code</p>
+
+      <!-- Category Tabs -->
+      <div class="reel__tabs reveal" id="reelTabs">
+        <button class="reel__tab active" data-tab="travels">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          Travels
+        </button>
+        <button class="reel__tab" data-tab="sports">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+          Sports
+        </button>
+        <button class="reel__tab" data-tab="moments">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          Moments
+        </button>
+      </div>
+
+      <!-- Tab Panels -->
+      <div class="reel__panels">
         <!--
           ============================================
           HOW TO ADD YOUR OWN PHOTOS:
           ============================================
-          1. Put your images in the assets/side-quests/ folder
-          2. Replace the placeholder src with your image path
-          3. Update the caption text
-          4. Add or remove carousel__slide divs as needed
+          1. Put travel photos in:  assets/highlight-reel/travels/
+          2. Put sports photos in:  assets/highlight-reel/sports/
+          3. Put moments photos in: assets/highlight-reel/moments/
+          4. Uncomment the <img> tag and update the src path
+          5. Remove the placeholder <div> once you add the image
+          6. Update the caption text
+          7. Add or remove reel__item divs as needed
         -->
-        <div class="carousel__slide">
-          <div class="carousel__image-wrapper">
-            <div class="carousel__placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              <span>Your Photo Here</span>
+
+        <!-- TRAVELS -->
+        <div class="reel__panel active" id="panel-travels">
+          <div class="reel__grid">
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/travels/photo1.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Where will you go first?</p>
             </div>
-            <!-- <img src="assets/side-quests/photo1.jpg" alt="Description" loading="lazy"> -->
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/travels/photo2.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Another adventure awaits</p>
+            </div>
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/travels/photo3.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Exploring the world</p>
+            </div>
           </div>
-          <p class="carousel__caption">Adventure awaits &mdash; add your first photo!</p>
         </div>
-        <div class="carousel__slide">
-          <div class="carousel__image-wrapper">
-            <div class="carousel__placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              <span>Your Photo Here</span>
+
+        <!-- SPORTS -->
+        <div class="reel__panel" id="panel-sports">
+          <div class="reel__grid">
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/sports/photo1.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Game day</p>
             </div>
-            <!-- <img src="assets/side-quests/photo2.jpg" alt="Description" loading="lazy"> -->
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/sports/photo2.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">In the zone</p>
+            </div>
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/sports/photo3.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Training never stops</p>
+            </div>
           </div>
-          <p class="carousel__caption">Capture the moment</p>
         </div>
-        <div class="carousel__slide">
-          <div class="carousel__image-wrapper">
-            <div class="carousel__placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              <span>Your Photo Here</span>
+
+        <!-- MOMENTS -->
+        <div class="reel__panel" id="panel-moments">
+          <div class="reel__grid">
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/moments/photo1.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Making memories</p>
             </div>
-            <!-- <img src="assets/side-quests/photo3.jpg" alt="Description" loading="lazy"> -->
-          </div>
-          <p class="carousel__caption">Another side quest memory</p>
-        </div>
-        <div class="carousel__slide">
-          <div class="carousel__image-wrapper">
-            <div class="carousel__placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              <span>Your Photo Here</span>
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/moments/photo2.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">The good times</p>
             </div>
-            <!-- <img src="assets/side-quests/photo4.jpg" alt="Description" loading="lazy"> -->
-          </div>
-          <p class="carousel__caption">The journey continues</p>
-        </div>
-        <div class="carousel__slide">
-          <div class="carousel__image-wrapper">
-            <div class="carousel__placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              <span>Your Photo Here</span>
+            <div class="reel__item">
+              <div class="reel__image-wrapper">
+                <div class="reel__placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span>Your Photo Here</span>
+                </div>
+                <!-- <img src="assets/highlight-reel/moments/photo3.jpg" alt="Description" loading="lazy"> -->
+              </div>
+              <p class="reel__caption">Living it up</p>
             </div>
-            <!-- <img src="assets/side-quests/photo5.jpg" alt="Description" loading="lazy"> -->
           </div>
-          <p class="carousel__caption">More adventures to come</p>
         </div>
       </div>
-      <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Next">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </button>
-      <div class="carousel__dots" id="carouselDots"></div>
     </div>
   </section>
 

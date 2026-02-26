@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initScrollReveal();
   initStatCounters();
-  initCarousel();
+  initHighlightReel();
 });
 
 /* ---- NAVIGATION ---- */
@@ -186,56 +186,25 @@ function animateCounter(element) {
   requestAnimationFrame(update);
 }
 
-/* ---- CAROUSEL ---- */
-function initCarousel() {
-  const track = document.getElementById('carouselTrack');
-  const prevBtn = document.getElementById('carouselPrev');
-  const nextBtn = document.getElementById('carouselNext');
-  const dotsContainer = document.getElementById('carouselDots');
+/* ---- HIGHLIGHT REEL TABS ---- */
+function initHighlightReel() {
+  const tabs = document.querySelectorAll('.reel__tab');
+  const panels = document.querySelectorAll('.reel__panel');
 
-  if (!track) return;
+  if (!tabs.length) return;
 
-  const slides = track.querySelectorAll('.carousel__slide');
-  const slideCount = slides.length;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
 
-  // Create dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = `carousel__dot${i === 0 ? ' active' : ''}`;
-    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    dot.addEventListener('click', () => scrollToSlide(i));
-    dotsContainer.appendChild(dot);
-  });
+      // Update active tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
 
-  const dots = dotsContainer.querySelectorAll('.carousel__dot');
-
-  function scrollToSlide(index) {
-    const slide = slides[index];
-    if (slide) {
-      track.scrollTo({
-        left: slide.offsetLeft - track.offsetLeft,
-        behavior: 'smooth',
-      });
-    }
-  }
-
-  function updateDots() {
-    const scrollLeft = track.scrollLeft;
-    const slideWidth = slides[0].offsetWidth + 24; // gap
-    const activeIndex = Math.round(scrollLeft / slideWidth);
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === activeIndex);
+      // Update active panel
+      panels.forEach(panel => panel.classList.remove('active'));
+      const activePanel = document.getElementById(`panel-${target}`);
+      if (activePanel) activePanel.classList.add('active');
     });
-  }
-
-  prevBtn.addEventListener('click', () => {
-    track.scrollBy({ left: -344, behavior: 'smooth' });
   });
-
-  nextBtn.addEventListener('click', () => {
-    track.scrollBy({ left: 344, behavior: 'smooth' });
-  });
-
-  track.addEventListener('scroll', updateDots, { passive: true });
 }
