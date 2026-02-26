@@ -1046,6 +1046,21 @@ ul {
   font-weight: 500;
 }
 
+/* Collection sub-headings */
+.reel__collection-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--ice-200);
+  display: inline-block;
+}
+
+.reel__collection-title + .reel__grid {
+  margin-bottom: 40px;
+}
+
 /* ===========================
    CONTACT
    =========================== */
