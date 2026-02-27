@@ -134,13 +134,6 @@ ul {
   max-width: 300px;
 }
 
-.section__number {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--primary);
-  font-family: 'SF Mono', 'Fira Code', monospace;
-}
-
 .section__subtitle {
   font-size: 16px;
   color: var(--text-secondary);
