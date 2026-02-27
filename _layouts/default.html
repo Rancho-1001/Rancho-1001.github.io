@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+  {% include side-decorations.html %}
+  {% include lightbox.html %}
+
+  <script src="{{ '/js/script.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+title: "Lemuel Mensah | Software Engineer"
+description: "Lemuel Mensah — Software Engineer specializing in distributed systems, platform engineering, and scalable infrastructure."
+url: "https://rancho-1001.github.io"
+baseurl: ""
+
+# Disable default theme (we use our own CSS)
+theme: null
+plugins: []
+
+# Exclude development files from the built _site/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .claude
